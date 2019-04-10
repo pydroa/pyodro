@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController">
+            <connections>
+                <outlet property="buttonBack" destination="xzj-C4-p0p" id="sJe-nc-avb"/>
+                <outlet property="buttonClose" destination="Yhn-Xq-9LI" id="BNt-CE-s8c"/>
+                <outlet property="buttonNext" destination="Fed-l8-exT" id="m2X-TW-Kly"/>
+                <outlet property="buttonRefresh" destination="CR2-Wp-y85" id="6co-W8-aSV"/>
+                <outlet property="toolBar" destination="H8z-AO-0nn" id="cOs-I5-ZJT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="io1-x9-l5V" id="W4d-kg-VzB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="io1-x9-l5V">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <dataDetectorType key="dataDetectorTypes"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="H8z-AO-0nn">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                    <items>
+                        <barButtonItem image="arrow_to_left.png" id="xzj-C4-p0p">
+                            <connections>
+                                <action selector="handleBack:" destination="-1" id="Hit-dI-lvm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="jTy-eX-ruu"/>
+                        <barButtonItem image="arrow_to_right.png" id="Fed-l8-exT">
+                            <connections>
+                                <action selector="handleNext:" destination="-1" id="p3P-VS-GgD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="dSI-mf-EVc"/>
+                        <barButtonItem title="Item" id="CR2-Wp-y85">
+                            <connections>
+                                <action selector="handleRefresh:" destination="-1" id="2N8-rl-cWN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="zMY-ED-rqJ"/>
+                        <barButtonItem title="Item" id="Yhn-Xq-9LI">
+                            <connections>
+                                <action selector="handleClose:" destination="-1" id="LG0-Re-i3F"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_to_left.png" width="33" height="33"/>
+        <image name="arrow_to_right.png" width="33" height="33"/>
+    </resources>
+</document>

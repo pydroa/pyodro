@@ -1,0 +1,6 @@
+framework module Pods_CCPColorSimulator2015 {
+  umbrella header "Pods-CCPColorSimulator2015-umbrella.h"
+
+  export *
+  module * { export * }
+}
